@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="homePage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="home" />
+	</bean>
+	
+	<bean id="loginPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="registerTenant" />
+	</bean>
+	
+	<bean id="resultPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="tenantCreationConfirmPage" />
+	</bean>
+    
+    <bean id="TaskScheduleListPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="TaskScheduleList" />
+	</bean>
+	
+	<bean id="editTaskSchedulePage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="editTaskSchedule" />
+	</bean>
+	
+	<bean id="usagePage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="usagePage" />
+	</bean>
+	
+	<bean id="tenantUsagePage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="tenantUsagePage" />
+	</bean>
+
+	<bean id="runningInstancePage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="runningInstancePage" />
+	</bean>
+		
+	<bean id="runningInstanceChartData" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/runningInstanceChartData.jsp" />
+	</bean>
+	
+    <bean id="meteringTotalsPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="meteringTotalsPage" />
+	</bean>
+	
+    <bean id="meteringTotalsChartDataPage" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/meteringTotalsChartData.jsp" />
+	</bean>
+	
+	<bean id="roleInstanceDataFromDeployment" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/roleInstanceDataFromDeployment.jsp" />
+	</bean>
+	
+	<bean id="taskCompletionPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="taskCompletionPage" />
+	</bean>
+	
+	<bean id="taskCompletionDetailsPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="taskCompletionDetailsPage" />
+	</bean>
+	
+	<bean id="provisioningStatusPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="provisioningStatusPage" />
+	</bean>
+	
+    <bean id="provisioningStatusDataPage" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/provisioningStatusDataPage.jsp" />
+	</bean>
+	
+    <bean id="jsonErrorPage" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/error.jsp" />
+	</bean>
+	
+	<bean id="instanceHealthPage" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="instanceHealthPage" />
+	</bean>
+	
+		<bean id="workerRoleChartData" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/workerRoleChartData.jsp" />
+	</bean>
+	
+	<bean id="roleInstanceKpiChartData" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/roleInstanceKpiChartData.jsp" />
+	</bean>
+	
+	<bean id="activeUserChartData" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/pages/json/activeUserChartData.jsp" />
+	</bean>
+</beans>

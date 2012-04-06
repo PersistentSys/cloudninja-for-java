@@ -1,0 +1,12 @@
+﻿<DiagnosticsConfig StorageAccountConnectionString="DefaultEndpointsProtocol=https;
+AccountName=cloudninjaforjavastorage;AccountKey=oX7xwfFXCvEj5JZoLIyPBYtO/hc9pi4DufmBCUmeBL+SKKAxU1E+35JIhjdST1gUykKrh2S1f00w7QVR62Djnw==">
+  <Directories>
+    <Directory ContainerName ="wad-tomcat-logs" 
+    		LocalPath ="apache-tomcat-7.0.22\acslogs"
+    		IsLocalPathRelative="true" />
+  </Directories>
+  <PerformanceCounters>
+    <PerformanceCounter CounterName="\Memory\Available MBytes" />
+    <PerformanceCounter CounterName="\Processor(*)\% Idle Time" />
+  </PerformanceCounters>
+</DiagnosticsConfig>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ServiceConfiguration xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" serviceName="WindowsAzureProject">
+  <Role name="WorkerRole1">
+    <Instances count="1"/>
+    <ConfigurationSettings>
+      
+      
+      <!-- NOTE: replace the following settings with your own -->
+      
+      
+      
+    </ConfigurationSettings>
+    <Certificates>
+      <!-- NOTE: The certificate with the thumbprint 875F1656A34D93B266E71BF19C116C39F16B6987 refers to 
+      the SampleRemoteDesktopPrivate.pfx/.cer certificate files included with the Windows Azure Starter Kit for Java. 
+      When you upload the .pfx certificate to Windows Azure, you need to provide the following password: Password1
+      Note this certificate password is *publicly known* so you should not use this sample certificate for anything 
+      other than educational purposes only. To generate your own self-signed certificate (.pfx and .cer) you can use 
+      encutil.exe from wastarterkit4java.codeplex.com.  You may delete this comment after you stop referencing this 
+      sample certificate. -->
+      
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
