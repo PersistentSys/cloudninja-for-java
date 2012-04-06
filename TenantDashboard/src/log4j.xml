@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" %d{hh:mm:ss} %-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="debugFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="D:/workspaces/cloudninjalogs/debug_logFile.log" />
+		<param name="MaxFileSize" value="10000KB" />
+		<!-- Keep one backup file -->
+		<param name="MaxBackupIndex" value="1" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{hh:mm:ss} %-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="errorFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="D:/workspaces/cloudninjalogs/error_logFile.log" />
+		<param name="MaxFileSize" value="10000KB" />
+		<!-- Keep one backup file -->
+		<param name="MaxBackupIndex" value="1" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{hh:mm:ss} %-4r [%t] %-5p %c %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="org.hibernate">
+    	<level value="error" />
+    	<appender-ref ref="errorFileAppender"/>
+	</logger>
+	
+	
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="debugFileAppender" />
+	</root>
+	  
+  	<logger name="com.microsoft.cloudninja">
+        <level value="error" />
+    	<appender-ref ref="errorFileAppender"/>
+  	</logger>
+	
+</log4j:configuration>

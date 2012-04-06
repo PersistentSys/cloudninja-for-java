@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <!-- Hibernate session factory -->
+		<import resource="dbContext.xml"/>
+				
+		<bean id="SessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+  			<property name="dataSource" ref="dataSource" /> 
+			<property name="annotatedClasses">
+				<list>
+	  				    <value>com.microsoft.cloudninja.domainobject.TaskScheduleEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.MeteringEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.TenantIdMasterEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.ProvisioningLogEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.TenantEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.KpiValueTempEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.RoleEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.RoleInstancesEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.DataServerEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.TenantDataConnectionEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.IdentityProviderEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.StorageBandwidthBatchEntity</value>
+	  				    <value>com.microsoft.cloudninja.domainobject.StorageAnalyticsLogsSummaryEntity</value>
+	  			</list>
+  			</property>
+  			<property name="mappingDirectoryLocations">
+				<list>                  
+				<value>classpath:com/microsoft/cloudninja/domainobject/</value>
+				</list>
+			</property>
+			<property name="hibernateProperties">
+				<props>
+  					<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> 
+  					<prop key="hibernate.show_sql">true</prop> 
+  					<prop key="hibernate.hbm2ddl.auto">update</prop> 
+  				</props>
+  			</property>
+  		</bean>
+  		
+  		<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+  			<property name="sessionFactory" ref="SessionFactory"></property>
+  		</bean>
+  	
+</beans>

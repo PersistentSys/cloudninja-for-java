@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/pages/baseLayout.jsp">
+		<put-attribute name="title" value="TEMPLATE" />
+		<put-attribute name="header" value="/WEB-INF/pages/tilessupport/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/tilessupport/left.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/tilessupport/home.jsp" />
+	</definition>
+	
+	<definition name="logoutlayout" template="/WEB-INF/pages/logoutlayout.jsp">
+	</definition>
+	
+	<definition name="tenantLoginPage" template="/WEB-INF/pages/tilessupport/home.jsp">
+		<put-attribute name="title" value="Tenant Login Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/tilessupport/home.jsp" />
+	</definition>
+	
+	<definition name="tenantHomePage" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Home Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/tenantHome.jsp" />
+	</definition>
+	
+	<definition name="showTenantHomePageListPage" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Chk Home Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/tenantHome2.jsp" />
+	</definition>
+	
+	<definition name="listDetails" extends="baseLayout">
+		<put-attribute name="title" value="Edit Task List" />
+		<put-attribute name="body" value="/WEB-INF/pages/listDetails.jsp" />
+	</definition>
+	
+	<definition name="editList" extends="baseLayout">
+		<put-attribute name="title" value="Edit Task List" />
+		<put-attribute name="body" value="/WEB-INF/pages/editList.jsp" />
+	</definition>
+	
+	
+	<definition name="createNewList" extends="baseLayout">
+		<put-attribute name="title" value="Edit Task List" />
+		<put-attribute name="body" value="/WEB-INF/pages/createNewList.jsp" />
+	</definition>
+	
+	<definition name="tenantMeteringPage" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Metering Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/tenantMetering.jsp" />
+	</definition>
+	
+	
+	<definition name="tenantProfilePage" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Profile" />
+		<put-attribute name="body" value="/WEB-INF/pages/tenantProfile.jsp" />
+	</definition>
+	
+	
+	<definition name="home" extends="baseLayout">
+		<put-attribute name="title" value="HomePage" />
+		<put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
+	</definition>
+	
+	<definition name="registerTenant" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Registration Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/register.jsp" />
+	</definition>
+	
+	<definition name="tenantCreationConfirmPage" extends="baseLayout">
+		<put-attribute name="title" value="Tenant Creation Successful" />
+		<put-attribute name="body" value="/WEB-INF/pages/result.jsp" />
+	</definition>
+	
+	<!-- Manage Users List Page -->
+	<definition name="manageUsersListPage" extends="baseLayout">
+		<put-attribute name="title" value="Manage Users List" />
+		<put-attribute name="body" value="/WEB-INF/pages/manageUsersList.jsp" />
+	</definition>
+	
+	<!-- Create Manage User Page -->
+	<definition name="createUserPage" extends="baseLayout">
+		<put-attribute name="title" value="Create User" />
+		<put-attribute name="body" value="/WEB-INF/pages/createUserPage.jsp" />
+	</definition>
+	
+	<!-- Delete User Page -->
+	<definition name="deleteUserPage" extends="baseLayout">
+		<put-attribute name="title" value="Delete User" />
+		<put-attribute name="body" value="/WEB-INF/pages/deleteUserPage.jsp" />
+	</definition>
+	
+	<!-- Update User Page -->
+	<definition name="updateUserPage" extends="baseLayout">
+		<put-attribute name="title" value="Update User" />
+		<put-attribute name="body" value="/WEB-INF/pages/updateUserPage.jsp" />
+	</definition>
+	
+		
+	<definition name="accessDenied" extends="baseLayout">
+		<put-attribute name="title" value="Access Denied" />
+		<put-attribute name="body" value="/WEB-INF/pages/denied.jsp" />
+	</definition>
+	
+	<definition name="logoutsuccesspage" template="baseLayout">
+		<put-attribute name="title" value="Logout Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/logoutsuccess.jsp" />
+	</definition>
+	
+	<definition name="trafficSimulationPage" extends="logoutlayout">
+		<put-attribute name="title" value="TrafficSimulation Page" />
+		<put-attribute name="body" value="/WEB-INF/pages/trafficSimulationPage.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

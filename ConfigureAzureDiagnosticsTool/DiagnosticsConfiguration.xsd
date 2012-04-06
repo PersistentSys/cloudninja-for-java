@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DiagnosticsConfig">    
+    <xs:complexType>      
+      <xs:sequence>        
+        <xs:element name="Directories">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="Directory">
+                <xs:complexType>
+                  <xs:attribute name="ContainerName" type="xs:string" use="required" />
+                  <xs:attribute name="LocalPath" type="xs:string" use="required" />
+                  <xs:attribute name="IsLocalPathRelative" type="xs:boolean" use="optional" default="false" />
+                  <xs:attribute name="DirectoryQuotaInMB" type="xs:int" use="optional" default="1" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ScheduledTransferPeriodInSeconds" type="xs:int" use="optional" default="60" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PerformanceCounters">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="PerformanceCounter">
+                <xs:complexType>
+                  <xs:attribute name="CounterName" type="xs:string" use="required" />
+                  <xs:attribute name="SamplingRateInSeconds" type="xs:int" use="optional" default="10" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ScheduledTransferPeriodInSeconds" type="xs:int" use="optional" default="60" />            
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="StorageAccountConnectionString" type="xs:string" use="required" />
+      <xs:attribute name="OverallQuotaInMB" type="xs:int" use="optional" default="4096" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

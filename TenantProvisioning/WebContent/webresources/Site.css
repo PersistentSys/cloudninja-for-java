@@ -1,0 +1,657 @@
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+
+body
+{
+    font-size: 75%;
+    font-family:Trebuchet MS, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+    margin-right:auto;
+    margin-left:auto;
+    background-image: url(images/bg.gif);
+}
+.logo
+{
+    position:relative;
+    top:20px;    
+    }
+a:link
+{
+    color: #fff;
+    text-decoration: underline;
+}
+a:visited
+{
+    color: #fff;
+}
+a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+a:active
+{
+    color: #fff;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    color: #000;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 20px 0 0 0;
+    margin:0;
+    font-size:32px;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+#page
+{
+        background-image: url(images/bg-fade.gif);
+        background-repeat:repeat-x;
+        margin:-14px 0 0 0;
+        padding:0;
+}
+#header, #main
+{
+	width:1370px;
+    margin-right:auto;
+    margin-left:auto;
+    
+    }
+
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+#header h1
+{
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+}
+
+#main
+{
+        margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+    background-color:#fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+#mainContainer
+{
+    padding-left:20px;
+    background-color:#99C0ED;
+    }
+    
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul.menu
+{
+    background-image: url(images/carbon-fiber-bg.gif);
+    background-repeat:repeat-x;
+    position: relative;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    width:480px;
+    float:right;
+    display: inline;
+    line-height:46px;
+
+}
+
+ul.menu li
+{
+
+    position: relative;
+    display:block;
+    float:left;
+    list-style: none;
+    width:120px;
+    height:52px;  
+    padding-bottom:6px;
+}
+
+
+ul.menu li a
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+ul.menu li:hover
+{
+    text-decoration: none;
+    background-image: url(images/menu-hover.gif);
+    background-repeat:no-repeat;
+}
+
+ul.menu li a:active
+{
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul.menu li.current
+{
+    background-image: url(images/menu-current.gif);
+    background-position: 55px 52px;
+    background-repeat:no-repeat;
+
+}
+/*-------------------------------------submenu--------------------------------*/
+
+ul.submenu
+{
+    background-image: url(images/submenu-bg.gif);
+    background-repeat:repeat-x;
+    position: relative;
+    margin: 0 50px 0 0;
+    padding:0;
+    text-align: center;
+    float:right;
+    display: inline;
+    line-height:26px;
+}
+
+ul.submenu li
+{
+
+    position: relative;
+    display:block;
+    float:left;
+    list-style: none;
+    height:31px;  
+    padding:0 40px 6px 40px;
+}
+
+
+ul.submenu li a
+{
+    text-decoration: underline;
+    color: #000;
+    text-transform:uppercase;
+}
+
+ul.submenu li a:hover
+{
+    text-decoration: none;
+    background-repeat:no-repeat;
+}
+
+ul.submenu li a:active
+{
+    background-color: #a6e2a6;
+    text-decoration: none;
+    
+}
+ul.submenu li.first
+{
+    background-image: url(images/submenu-left.gif);
+    background-position: 0px 0px;
+    background-repeat:no-repeat;
+
+}
+ul.submenu li.last
+{
+    background-image: url(images/submenu-right.gif);
+    background-position: 124px 0px;
+    background-repeat:no-repeat;
+
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+input[type="text"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+input[type="password"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table 
+{
+  border: solid 1px #e8eef4;
+  border-collapse: collapse;
+}
+
+table td 
+{
+  padding: 5px;   
+  border: solid 1px #e8eef4;
+}
+
+table th
+{
+  padding: 6px 5px;
+  text-align: left;
+  background-color: #e8eef4; 
+  border: solid 1px #e8eef4;   
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:40px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+}
+
+.display-field,
+.editor-field
+{
+    margin:0.5em 0 0 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+/*-------------table data-------------------*/
+
+.data-table
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 10px;
+	margin: 25px;
+	width: 1300px;
+	text-align: left;
+	border-collapse: collapse;
+}
+.data-table th
+{
+	font-size: 10px;
+	font-weight: normal;
+	color:#fff;
+	padding: 8px;
+	border-top: 4px solid #FF;
+	border-bottom: 1px solid #fff;  
+	background-image: url(images/bg.gif);
+	border-right:0px;
+	border-left:0px;
+}
+.data-table td
+{
+	padding: 8px;
+	background-color:#e8eef4;
+	border-bottom: 1px solid #8595B2;
+	color: #669;
+	border-top: 1px solid transparent;
+	border-right:0px;
+	border-left:0px;
+}
+.data-table tr:hover td
+{
+	background:#fff;
+	color: #131313;
+}
+.data-table td a
+{
+    color:#000;
+}
+/*------------------------Login--------------------------*/
+
+#loginPanel
+{
+    background-color:#ffffff;
+    margin-left:auto;
+    margin-right:auto;
+    width:500px;
+    padding:20px;
+    margin-top:200px;
+    }
+#loginBackground
+{
+    background-color:#99C0ED;
+    width:500px;
+    }
+#loginHeader {
+	width: 330px;
+	height: 26px;
+	color: #5A698B;
+	padding-top: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	
+}
+.loginLogo
+{
+    position:relative;
+    top:-124px;
+    }
+
+form {
+	width: 335px;
+}
+
+.col1 {
+	text-align:left;
+	color:#000000;
+	width: 75px;
+	height: 31px;
+	margin: 8px 2px 0 35px;
+	float: left;
+}
+
+.col2 {
+	padding:3px;
+	display: block;
+	float: left;
+	margin: 0;
+	background-color:#e8eef4;
+}
+a.password
+{
+    float: right;
+    margin-left:5px;
+    margin-right:5px;
+    padding-top:4px;
+    color: #696969;
+    }
+div.row {
+	clear: both;
+	width: 490px;
+	height:48px;
+	margin-bottom:5px;
+}
+
+.submit {
+	height: 29px;
+	width: 80px;
+	padding-top: 5px;
+	clear: both;
+    font-family:Trebuchet MS, sans-serif;
+    font-size:14px;
+    color:#000;
+    text-transform:uppercase;
+    border:1px solid;   
+    border-color: #8595B2;   
+
+} 
+
+.input {
+	background-color: #fff;
+    font-family:Trebuchet MS, sans-serif;
+    font-size:14px;
+	color: #5A698B;
+	padding: 1px;
+	border: 1px solid #8595B2;
+	height:24px;
+}
+
+/*------------ Collapse/Expand styles */
+.oc-img
+{
+    margin:10px;
+    border:0;
+    width:300px;
+    height:200px;
+    }
+    
+.toggle_container {
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	width: 100%;
+	clear: both;
+} 
+
+h2.trigger 
+{
+	padding: 0;
+	margin: 0 0 5px 0;
+	background: url(../images/open.png) no-repeat;
+	background-position: 5px 10px;
+    color:#ffffff;
+    width:100%;
+    height:32px;
+    font-size: 140%;
+    font-weight: normal;
+    line-height: 150%;
+    text-transform:uppercase;
+	float: right;
+    background-color:#035572;
+}
+h2.trigger a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding-left:20px;
+}
+h2.active 
+{
+    background: url(../images/close.png) no-repeat; 
+    background-color:#035572;
+    background-position: 5px 10px;
+}
+h3.trigger 
+{
+	padding: 0;
+	margin: 0 0 5px 0;
+	background: url(../images/open.png) no-repeat;
+	background-position: 5px 10px;
+    width:100%;
+    height:32px;
+    font-size: 140%;
+    font-weight: normal;
+    line-height: 150%;
+    text-transform:uppercase;
+	float: right;
+    background-color:#035572;
+}
+h3.trigger a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding-left:20px;
+}
+h3.active 
+{
+    background: url(../images/close.png) no-repeat; 
+    background-color:#035572;
+    background-position: 5px 10px;
+}
+
+/*-------------------Loader--------------------- */
+.rendered-chart{
+    background-image:url(../content/images/loader-graph.gif);
+    width:400px;
+    height:195px;
+    }
+    
+.loader-animation-gif{
+    margin:auto auto;
+    padding-top:41px;
+    width: 20px;
+    height: 20px;
+    }
+    
+#pager{
+	margin-left: 18px;
+	position: static !important;
+	}
+ 

@@ -1,0 +1,9 @@
+﻿<DiagnosticsConfig StorageAccountConnectionString="UseDevelopmentStorage=true">
+  <Directories>
+    <Directory ContainerName ="wad-bin-directory" LocalPath ="logs" IsLocalPathRelative="true" />
+  </Directories>
+  <PerformanceCounters>
+    <PerformanceCounter CounterName="\Memory\Available MBytes" />
+    <PerformanceCounter CounterName="\Processor\% Idle Time" />
+  </PerformanceCounters>
+</DiagnosticsConfig>

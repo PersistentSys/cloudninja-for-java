@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	   xmlns:beans="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd"
+       default-autowire="byName">
+       
+       <global-method-security secured-annotations="disabled" />
+       
+       	<!--  Properties  --> 
+		<beans:bean id="securityConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+			<beans:property name="location">
+  				<beans:value>/WEB-INF/resources/security.properties</beans:value> 
+  			</beans:property>
+  		</beans:bean>
+       
+       <beans:bean id="rememberMeFilter" class="org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter">
+			<beans:property name="authenticationManager" ref="authenticationManager"/>
+			<beans:property name="rememberMeServices" ref="rememberMeServices"/>
+		</beans:bean>
+		
+		<authentication-manager alias="authenticationManager">
+			<authentication-provider user-service-ref="userDetailsService">
+			</authentication-provider>
+			<authentication-provider ref="rememberMeAuthProvider" />
+		</authentication-manager>
+		
+		<beans:bean id="userDetailsService"
+			class="com.microsoft.cloudninja.web.security.CloudNinjaUserDetailsService">
+		</beans:bean>
+		
+		<beans:bean id="rememberMeAuthProvider"
+			class="org.springframework.security.authentication.RememberMeAuthenticationProvider">
+			<beans:property name="key" value="CLOUDNINJAKEY" />
+		</beans:bean>
+ 
+		<beans:bean id="rememberMeServices"
+			class="com.microsoft.cloudninja.web.security.CloudNinjaRemembermeService">
+			<beans:property name="userDetailsService" ref="userDetailsService" />
+			<beans:property name="cookieName" value="CLOUDNINJAAUTH" />
+			<beans:property name="key" value="CLOUDNINJAKEY" />
+		</beans:bean>
+		
+		<beans:bean id="authenticationEntryPoint"
+			class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+			<beans:property name="loginFormUrl" value="/showTenantLoginPage.htm" />
+		</beans:bean>
+
+		<beans:bean id="authenticationProcessingFilter"
+			class="com.microsoft.cloudninja.web.security.CNAuthenticationProcessingFilter">
+			<beans:property name="cookieName" value="CLOUDNINJAAUTH" />
+			<beans:property name="allowSessionCreation" value="false"></beans:property>
+			<beans:property name="authenticationManager" ref="authenticationManager" />
+			<beans:property name="userDetailsService" ref="userDetailsService" />
+			<beans:property name="authenticationSuccessHandler">
+				<beans:bean id="authenticationSuccessHandler"
+					class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler"
+					p:alwaysUseDefaultTargetUrl="false" p:defaultTargetUrl="/redirectToHomePage.htm" />
+			</beans:property>
+			<beans:property name="authenticationFailureHandler">
+				<beans:bean id="authenticationFailureHandler"
+					class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler"
+					p:defaultFailureUrl="/showTenantLoginPage.htm" />
+			</beans:property>
+		</beans:bean>
+		
+		<http auto-config="false" entry-point-ref="authenticationEntryPoint">
+			<custom-filter position="REMEMBER_ME_FILTER"
+				ref="rememberMeFilter" />
+			<custom-filter position="FORM_LOGIN_FILTER"
+				ref="authenticationProcessingFilter" />
+  	    <custom-filter position="LOGOUT_FILTER" ref="logoutFilter" />
+	
+			<intercept-url pattern="/showTenantLoginPage.htm" filters="none" />
+			<intercept-url pattern="/*/showAccessDenied.htm" filters="none" />
+			<intercept-url pattern="/*/showTenantProfilePage.htm" access="ROLE_Administrator" />
+			<intercept-url pattern="/showTanentHomePage.htm" access="ROLE_User,ROLE_Administrator" />
+			<intercept-url pattern="/*/showTenantMeteringPage.htm" access="ROLE_Administrator" />
+			<intercept-url pattern="/*/showManageUsersList.htm" access="ROLE_Administrator" />
+	
+			<access-denied-handler ref="accessDeniedHandler" />
+		</http>
+		
+<!--		<beans:bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">-->
+<!--			<beans:property name="rolePrefix" value=""/>-->
+<!--		</beans:bean>-->
+
+		<beans:bean id="logoutFilter"
+			class="com.microsoft.cloudninja.web.security.CNLogoutFilter">
+			<beans:constructor-arg value="/showTenantLoginPage.htm" />
+			<beans:constructor-arg>
+				<beans:list>
+					<beans:ref bean="rememberMeServices" />
+					<beans:bean id="logoutHandler"
+						class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
+					</beans:bean>
+				</beans:list>
+			</beans:constructor-arg>
+			<beans:property name="filterProcessesUrl" value="/j_spring_security_logout" />
+		</beans:bean>
+
+		<beans:bean id="accessDeniedHandler"
+			class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+			<beans:property name="errorPage" value="/showAccessDenied.htm" />
+		</beans:bean>
+		
+</beans:beans>

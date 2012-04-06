@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012 Persistent Systems Ltd.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	   					   	http://www.springframework.org/schema/mvc
+							http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	   					  ">
+
+	<mvc:interceptors>
+		<bean id="sampleInterceptor" class="com.microsoft.cloudninja.utils.RoleBasedAccessControlInterceptor">
+			<property name="userurls">
+				<map>
+					<entry key="blankurl" value=""/>
+					<entry key="rooturl" value="/"/>
+					<entry key="homeurl" value="/TenantDashBoard"/>
+					<entry key="createlist" value="/createList.htm" />
+					<entry key="createnewlist" value="/createNewList.htm" />
+					<entry key="deletelist" value="/deleteList.htm" />
+					<entry key="editlist" value="/editList.htm" />
+					<entry key="editlistpage" value="/editListPage.htm" />
+					<entry key="listdetails" value="/listDetails.htm" />
+					<entry key="logout" value="/logout.htm" />
+					<entry key="redirecttohomepage" value="/redirectToHomePage.htm" />
+					<entry key="showaccessdenied" value="/showAccessDenied.htm" />
+					<entry key="showtenanthomepage" value="/showTenantHomePage.htm" />
+					<entry key="showtenanthomepagelist" value="/showTenantHomePageList.htm" />
+					<entry key="showtenantloginpage" value="/showTenantLoginPage.htm" />
+					<entry key="showtrafficsimulationPage" value="/showTrafficSimulationPage.htm" />
+				</map>
+			</property>
+			<property name="adminurls">
+				<map>
+					<entry key="blankurl" value=""/>
+					<entry key="rooturl" value="/"/>
+					<entry key="homeurl" value="/TenantDashBoard"/>
+					<entry key="createlist" value="/createList.htm" />
+					<entry key="createmanageuser" value="/createManageUser.htm" />					
+					<entry key="createnewlist" value="/createNewList.htm" />
+					<entry key="createuser" value="/createUser.htm" />
+					<entry key="deletelist" value="/deleteList.htm" />
+					<entry key="deletetenant" value="/deleteTenant.htm" />
+					<entry key="deleteuser" value="/deleteUser.htm" />
+					<entry key="deleteuserpage" value="/deleteUserPage.htm" />
+					<entry key="editlist" value="/editList.htm" />
+					<entry key="editlistpage" value="/editListPage.htm" />
+					<entry key="listdetails" value="/listDetails.htm" />
+					<entry key="logout" value="/logout.htm" />
+					<entry key="redirecttohomepage" value="/redirectToHomePage.htm" />
+					<entry key="showaccessdenied" value="/showAccessDenied.htm" />
+					<entry key="showmanageuserslist" value="/showManageUsersList.htm" />
+					<entry key="showtenanthomepage" value="/showTenantHomePage.htm" />
+					<entry key="showtenanthomepagelist" value="/showTenantHomePageList.htm" />
+					<entry key="showtenantloginpage" value="/showTenantLoginPage.htm" />
+					<entry key="showtenantmeteringpage" value="/showTenantMeteringPage.htm" />
+					<entry key="showtenantprofilepage" value="/showTenantProfilePage.htm" />
+					<entry key="updateuser" value="/updateUser.htm" />
+					<entry key="updateuserpage" value="/updateUserPage.htm" />
+					<entry key="showtrafficsimulationPage" value="/showTrafficSimulationPage.htm" />
+				</map>
+			</property>
+		</bean>
+	</mvc:interceptors>
+</beans>
