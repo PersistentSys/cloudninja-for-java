@@ -1,6 +1,6 @@
 ###  Master branch
   The purpose of this branch is to access the Dashboard application by having the tenantID in the application URL. i.e. no need to register the domain name for the deployment(cloudninja.cloudapp.net).
-  e.g. http://www.cloudninja.com/TenantDashBoard/{tenantId}
+  e.g. http://cloudninja.cloudapp.net/TenantDashBoard/{tenantId}
 
 ### Project Description
 
