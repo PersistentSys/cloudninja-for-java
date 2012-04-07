@@ -1,21 +1,3 @@
-### CloudNinja for Java
-Persistent Systems has developed multi-tenant sample application (called as CloudNinja) in Java for the Windows Azure 
-platform which would help the Java community to develop Java applications for Windows Azure. The CloudNinja for Java 
-application will help Java developers to implement best practices and design patterns that are required for Java 
-multi-tenant applications on Windows Azure.
- 
-The CloudNinja for Java application encompasses the following points:
- Tenant on boarding
- Tenant level customization (for example, managing logos)
- Data isolation for Tenant
- Metering for Tenant
- Providing support for log-in via different identity providers (for example, Yahoo!, Google, Windows Live ID)
- 
-This application also demonstrates how to use the various Windows Azure Services such as:
- ACS
- Windows Azure Storage
- SQL Azure database and so on.
-
 ### License Information
  Copyright 2012 Persistent Systems Ltd.
  
