@@ -17,10 +17,14 @@
 ###  Master branch
   The purpose of this branch is to access the Dashboard application by having the tenantID in the application URL. i.e. no need to register the domain name for the deployment(cloudninja.cloudapp.net).
   e.g. http://cloudninja.cloudapp.net/TenantDashBoard/{tenantId}
+  
+  The Tenant provisioning application is used to provision a tenant in the system and can be accessed via URL as e.g. http://cloudninja.cloudapp.net/TenantProvisioning   
 
 ### Project Description
 
-The ClounNinja for Java Project is a Windows Azure multi-tenant sample application demonstrating common multi-tenant features (provisioning, monitoring, metering, customization and third party identity providers). A multi-tenant application serves multiple clients while providing a virtual space for isolating each client (tenant). The isolation is achieved by preventing the tenants from seeing each other�s data.
+The ClounNinja for Java Project is a Windows Azure multi-tenant sample application demonstrating common multi-tenant features (provisioning, monitoring, metering, customization and third party identity providers). 
+A multi-tenant application serves multiple clients while providing a virtual space for isolating each client (tenant). 
+The isolation is achieved by preventing the tenants from seeing each others data.
 
 ### Key Features
 CloudNinja sample will demonstrate how to design a multi-tenant application for managing tasks by leveraging windows azure platform and provide the following features:
@@ -29,10 +33,10 @@ CloudNinja sample will demonstrate how to design a multi-tenant application for 
   *       Register new tenants.
   *       Remove an existing tenant.
 2. Monitoring
-                *       Collect key performance indicators to report the performance and health of the application.
+  *       Collect key performance indicators to report the performance and health of the application.
 3. Customization
-                *        Allow tenants to include branding information.
-                *        Allow each tenant to manage its list of users.
+  *        Allow tenants to include branding information.
+  *        Allow each tenant to manage its list of users.
 4. Metering Charts
 5. Support for third party identity providers including Windows Live ID, Google, Yahoo! and CustomSTS.
      
