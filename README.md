@@ -17,10 +17,14 @@
 ###  Domain branch
   The purpose of this branch is to access the Dashboard application with the tenantID as a subdomain in the application URL.
   e.g. http://{tenantID}.cloudninja.com/TenantDashBoard
-
+  
+  The Tenant provisioning application is used to provision a tenant in the system and can be accessed via URL as e.g. http://www.cloudninja.com/TenantProvisioning
+  
 ### Project Description
 
-The ClounNinja for Java Project is a Windows Azure multi-tenant sample application demonstrating common multi-tenant features (provisioning, monitoring, metering, customization and third party identity providers). A multi-tenant application serves multiple clients while providing a virtual space for isolating each client (tenant). The isolation is achieved by preventing the tenants from seeing each other�s data.
+The ClounNinja for Java Project is a Windows Azure multi-tenant sample application demonstrating common multi-tenant features (provisioning, monitoring, metering, customization and third party identity providers). 
+A multi-tenant application serves multiple clients while providing a virtual space for isolating each client (tenant). 
+The isolation is achieved by preventing the tenants from seeing each others data.
 
 ### Key Features
 CloudNinja sample will demonstrate how to design a multi-tenant application for managing tasks by leveraging windows azure platform and provide the following features:
@@ -31,8 +35,8 @@ CloudNinja sample will demonstrate how to design a multi-tenant application for 
 2. Monitoring
   *       Collect key performance indicators to report the performance and health of the application.
 3. Customization
-                *        Allow tenants to include branding information.
-                *        Allow each tenant to manage its list of users.
+  *        Allow tenants to include branding information.
+  *        Allow each tenant to manage its list of users.
 4. Metering Charts
 5. Support for third party identity providers including Windows Live ID, Google, Yahoo! and CustomSTS.
      
