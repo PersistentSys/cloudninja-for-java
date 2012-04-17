@@ -36,7 +36,7 @@
   			</property>
   		</bean>
   		
-  		<bean id="storageClientUtility" class="com.microsoft.cloudninja.utils.StorageClientUtility">
+  		<bean id="storageClientUtility" class="com.persistent.cloudninja.utils.StorageClientUtility">
   			<property name="defaultEndpointsProtocol" value="${storage.endpoint}"/>
   			<property name="accountName" value="${storage.accName}"/>
   			<property name="accountKey" value="${storage.accKey}"/>
@@ -46,10 +46,10 @@
   		 
   		
 		<!-- Domain Objects -->
-		<context:component-scan base-package="com.microsoft.cloudninja.domainobject" />
+		<context:component-scan base-package="com.persistent.cloudninja.domainobject" />
 		<!-- Utility Classes -->
-		<context:component-scan base-package="com.microsoft.cloudninja.utils" />
+		<context:component-scan base-package="com.persistent.cloudninja.utils" />
 		<!-- Validator objects -->
-		<context:component-scan base-package="com.microsoft.cloudninja.validator"/>
+		<context:component-scan base-package="com.persistent.cloudninja.validator"/>
 		
 </beans>

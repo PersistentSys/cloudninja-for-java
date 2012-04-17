@@ -17,8 +17,8 @@ limitations under the License.
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.microsoft.cloudninja.controller.AuthFilterUtils"%>
-<%@ page import="com.microsoft.cloudninja.web.security.CloudNinjaConstants"%>
+<%@ page import="com.persistent.cloudninja.controller.AuthFilterUtils"%>
+<%@ page import="com.persistent.cloudninja.web.security.CloudNinjaConstants"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">

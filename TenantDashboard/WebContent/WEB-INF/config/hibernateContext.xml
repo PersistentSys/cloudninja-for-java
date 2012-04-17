@@ -26,12 +26,12 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
   			<property name="dataSource" ref="dataSource" /> 
 			<property name="annotatedClasses">
 				<list>
-	  				<value>com.microsoft.cloudninja.domainobject.Member</value>
-	  				<value>com.microsoft.cloudninja.domainobject.Role</value>
-	  				<value>com.microsoft.cloudninja.domainobject.Tenant</value>
-	  				<value>com.microsoft.cloudninja.domainobject.UserActivityEntity</value>
-	  				<value>com.microsoft.cloudninja.domainobject.TenantDataConnectionEntity</value>
-	  				<value>com.microsoft.cloudninja.domainobject.IdentityProviderEntity</value>
+	  				<value>com.persistent.cloudninja.domainobject.Member</value>
+	  				<value>com.persistent.cloudninja.domainobject.Role</value>
+	  				<value>com.persistent.cloudninja.domainobject.Tenant</value>
+	  				<value>com.persistent.cloudninja.domainobject.UserActivityEntity</value>
+	  				<value>com.persistent.cloudninja.domainobject.TenantDataConnectionEntity</value>
+	  				<value>com.persistent.cloudninja.domainobject.IdentityProviderEntity</value>
 	  			</list>
   			</property>
 			<property name="hibernateProperties">

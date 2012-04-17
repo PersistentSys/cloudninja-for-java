@@ -26,24 +26,24 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
   			<property name="dataSource" ref="dataSource" /> 
 			<property name="annotatedClasses">
 				<list>
-	  				    <value>com.microsoft.cloudninja.domainobject.TaskScheduleEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.MeteringEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.TenantIdMasterEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.ProvisioningLogEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.TenantEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.KpiValueTempEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.RoleEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.RoleInstancesEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.DataServerEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.TenantDataConnectionEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.IdentityProviderEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.StorageBandwidthBatchEntity</value>
-	  				    <value>com.microsoft.cloudninja.domainobject.StorageAnalyticsLogsSummaryEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.TaskScheduleEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.MeteringEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.TenantIdMasterEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.ProvisioningLogEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.TenantEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.KpiValueTempEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.RoleEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.RoleInstancesEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.DataServerEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.TenantDataConnectionEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.IdentityProviderEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.StorageBandwidthBatchEntity</value>
+	  				    <value>com.persistent.cloudninja.domainobject.StorageAnalyticsLogsSummaryEntity</value>
 	  			</list>
   			</property>
   			<property name="mappingDirectoryLocations">
 				<list>                  
-				<value>classpath:com/microsoft/cloudninja/domainobject/</value>
+				<value>classpath:com/persistent/cloudninja/domainobject/</value>
 				</list>
 			</property>
 			<property name="hibernateProperties">

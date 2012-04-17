@@ -20,28 +20,14 @@ limitations under the License.
 	<link href="resources/Site.css" rel="stylesheet" type="text/css">
 	</head>
 				<title>Logout</title>
-<body bgcolor="BLACK">
+<body bgcolor="BLACK" style="margin-top : 18px;">
 
-	<div>
 		<div>
-			
-			<div id="page">
-				<div id="header">
-					<div id="title">
-						<img src="resources/images/cloudninja-logo.gif" id="logoImage" alt="The Cloud Ninja" class="logo">
-					</div>			
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
-		<div>
-
 			<div id="main">
 				<div id="mainContainer">
 				<h2>Logout</h2>
 				<br/>
-					You have successfully logged out. <a href="/TenantDashBoard">Click here</a> to login again
+					<font size="2" color="red">You have successfully logged out. To help protect your account, close all browser windows.</font>
 				<br/>
 				<div id="footer"></div>
 				</div>

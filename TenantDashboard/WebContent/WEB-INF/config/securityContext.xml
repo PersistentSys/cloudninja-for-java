@@ -44,7 +44,7 @@
 		</authentication-manager>
 		
 		<beans:bean id="userDetailsService"
-			class="com.microsoft.cloudninja.web.security.CloudNinjaUserDetailsService">
+			class="com.persistent.cloudninja.web.security.CloudNinjaUserDetailsService">
 		</beans:bean>
 		
 		<beans:bean id="rememberMeAuthProvider"
@@ -53,7 +53,7 @@
 		</beans:bean>
  
 		<beans:bean id="rememberMeServices"
-			class="com.microsoft.cloudninja.web.security.CloudNinjaRemembermeService">
+			class="com.persistent.cloudninja.web.security.CloudNinjaRemembermeService">
 			<beans:property name="userDetailsService" ref="userDetailsService" />
 			<beans:property name="cookieName" value="CLOUDNINJAAUTH" />
 			<beans:property name="key" value="CLOUDNINJAKEY" />
@@ -65,7 +65,7 @@
 		</beans:bean>
 
 		<beans:bean id="authenticationProcessingFilter"
-			class="com.microsoft.cloudninja.web.security.CNAuthenticationProcessingFilter">
+			class="com.persistent.cloudninja.web.security.CNAuthenticationProcessingFilter">
 			<beans:property name="cookieName" value="CLOUDNINJAAUTH" />
 			<beans:property name="allowSessionCreation" value="false"></beans:property>
 			<beans:property name="authenticationManager" ref="authenticationManager" />
@@ -104,7 +104,7 @@
 <!--		</beans:bean>-->
 
 		<beans:bean id="logoutFilter"
-			class="com.microsoft.cloudninja.web.security.CNLogoutFilter">
+			class="com.persistent.cloudninja.web.security.CNLogoutFilter">
 			<beans:constructor-arg value="/showTenantLoginPage.htm" />
 			<beans:constructor-arg>
 				<beans:list>

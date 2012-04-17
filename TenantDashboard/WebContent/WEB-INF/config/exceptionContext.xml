@@ -27,8 +27,8 @@
 		<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 			<property name="exceptionMappings">
 				<props>
-  					<prop key="com.microsoft.cloudninja.exception.CloudNinjaException">errorPage</prop> 
-  					<prop key="com.microsoft.cloudninja.exception.SystemException">errorPage</prop> 
+  					<prop key="com.persistent.cloudninja.exception.CloudNinjaException">errorPage</prop> 
+  					<prop key="com.persistent.cloudninja.exception.SystemException">errorPage</prop> 
   				</props>
   			</property>
   		</bean>

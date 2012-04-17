@@ -23,7 +23,7 @@
 	   					  ">
 
 	<mvc:interceptors>
-		<bean id="sampleInterceptor" class="com.microsoft.cloudninja.utils.RoleBasedAccessControlInterceptor">
+		<bean id="sampleInterceptor" class="com.persistent.cloudninja.utils.RoleBasedAccessControlInterceptor">
 			<property name="userurls">
 				<map>
 					<entry key="blankurl" value=""/>
