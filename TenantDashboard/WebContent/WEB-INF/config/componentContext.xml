@@ -26,20 +26,20 @@
     default-autowire="byName">
     
     	<!-- Validators -->
-		<context:component-scan base-package="com.microsoft.cloudninja.validator" />
+		<context:component-scan base-package="com.persistent.cloudninja.validator" />
     
 		<!-- Domain Objects -->
-		<context:component-scan base-package="com.microsoft.cloudninja.domainobject" />
+		<context:component-scan base-package="com.persistent.cloudninja.domainobject" />
 		
 		<!-- Utility Classes -->
-		<context:component-scan base-package="com.microsoft.cloudninja.utils" />
+		<context:component-scan base-package="com.persistent.cloudninja.utils" />
 		
-		<bean id="authFilterUtils" class="com.microsoft.cloudninja.controller.AuthFilterUtils">
+		<bean id="authFilterUtils" class="com.persistent.cloudninja.controller.AuthFilterUtils">
 			<property name="tenantDao" ref="tenantDao"/>
 			<property name="manageUsersDao" ref="manageUsersDao"/>
 		</bean>
 		
-		<bean id="cloudNinjaAuthFilter" class="com.microsoft.cloudninja.controller.CloudNinjaAuthFilter">
+		<bean id="cloudNinjaAuthFilter" class="com.persistent.cloudninja.controller.CloudNinjaAuthFilter">
 			<property name="tenantDao" ref="tenantDao"/>
 		</bean>
 		

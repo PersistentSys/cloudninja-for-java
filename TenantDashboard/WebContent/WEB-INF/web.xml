@@ -34,7 +34,7 @@
 	</context-param>
 	<filter>
 		<filter-name>CloudNinjaAuthFilter</filter-name>
-		<filter-class>com.microsoft.cloudninja.controller.CloudNinjaAuthFilter</filter-class>
+		<filter-class>com.persistent.cloudninja.controller.CloudNinjaAuthFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>CloudNinjaAuthFilter</filter-name>

@@ -54,7 +54,7 @@
 		<appender-ref ref="debugFileAppender" />
 	</root>
 	  
-  	<logger name="com.microsoft.cloudninja">
+  	<logger name="com.persistent.cloudninja">
         <level value="error" />
     	<appender-ref ref="errorFileAppender"/>
   	</logger>

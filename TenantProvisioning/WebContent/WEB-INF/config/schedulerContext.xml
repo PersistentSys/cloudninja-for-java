@@ -26,10 +26,10 @@
    		http://www.springframework.org/schema/task/spring-task-3.0.xsd"
     default-autowire="byName">
     
-    <context:component-scan base-package="com.microsoft.cloudninja.scheduler">
+    <context:component-scan base-package="com.persistent.cloudninja.scheduler">
     </context:component-scan>
     
-    <bean id="scheduler" class="com.microsoft.cloudninja.scheduler.Scheduler">
+    <bean id="scheduler" class="com.persistent.cloudninja.scheduler.Scheduler">
     	<constructor-arg name="storageUtility" ref="storageUtility"></constructor-arg>
 		<constructor-arg name="taskScheduleDao" ref="taskScheduleDao"></constructor-arg>
 	</bean>
